@@ -1,3 +1,14 @@
 <h1>
   {{title}}
+  <a (click)="getCars()">Get Cars!</a>
 </h1>
+<div>
+  Cars:
+  <div *ngFor="let car of cars">
+    {{car.getCustomId()}}
+  </div>
+</div>
+<div>
+  Error:
+  {{error}}
+</div>
