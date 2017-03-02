@@ -9,8 +9,8 @@ import {HttpClient} from "./HttpClient";
 @Injectable()
 export class CarService extends BaseService {
 
-  constructor(http: HttpClient) {
-    super(new CarFactory(), '/assets/cars.json', http);
+  constructor(http: HttpClient, carFactory: CarFactory) {
+    super(carFactory, '/assets/cars.json', http);
   }
 
 }

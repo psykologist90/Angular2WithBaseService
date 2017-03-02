@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {CarService} from "./services/CarService";
 import {HttpClient} from "./services/HttpClient";
+import {CarFactory} from "./factories/CarFactory";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import {HttpClient} from "./services/HttpClient";
     FormsModule,
     HttpModule
   ],
-  providers: [HttpClient, CarService],
+  providers: [HttpClient, CarService, CarFactory],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
